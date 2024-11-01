@@ -18,6 +18,8 @@ RUN pip install --no-cache-dir -r dependencies.txt
 # Copy the entire project into the container
 COPY . .
 
+ENV DJANGO_SECRET_KEY=xq(2+-0sfpi_2()qej9g23)!_##-+4-8e8x%qmucb5^w$3z0@#
+
 # Collect static files (if applicable)
 RUN python manage.py collectstatic --noinput
 
